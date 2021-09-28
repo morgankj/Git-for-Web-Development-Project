@@ -1,0 +1,146 @@
+https://codepen.io/morgankj/pen/abwXoqy?editors=1100
+
+1. What is Semantic HTML?
+	The use of HTML markup to reinforce and communicate the meaning of code/data on a webpage.
+
+2. What is HTML used for?
+	HTML is used to build the structure of a website; it defines the basic structure of a webpage.
+
+3. What is an attribute and where do we put it?
+	An HTML attribute is a special keyword used inside of an opening tag to define that element's behavior.
+
+4. What is the h1 tag used for? How many times should I use it on a page?
+	The h1 tag is used to define the main header on a webpage. It should only ever be used once on any page.
+
+5. Name two tags that have required attributes
+	<img> and <link>
+
+6. What do we put in the head of our HTML document?
+	You must define the DOCTYPE.
+
+7. What is an id? 
+	An id is a unique HTML attribute that can be used to identify an element.
+
+8. What elements can I add an id to? 
+	You can add an id attribute to any HTML opening tag element, so long as that id is unique and not repeated for any other tag on that webpage.
+
+9. How many times can I use the same id on a page? 
+	NEVER!
+
+10. What is a class? 
+	A class is an HTML attribute that can be used to identify an element.
+
+11. What elements can I add a class to? 
+	You can add a class attribute to any HTML opening tag element.
+
+12. How many times can I use the same class on a page? 
+	As many times as you like!
+
+13. How do I get my link to open in a new tab?
+	Use a "target" attribute in your opening tag with the value "_blank" (ex. <a href="http://twitter.com" target="_blank"> )
+
+14. What is the alt attribute in the image tag used for? 
+	The alt attribute is used to provide a text description of the image being displayed.
+
+15. How do I reference an id?
+	You reference an id in CSS by using the "#" character, followed by the id name, then the curly brackets that contain your CSS rules for that id. (ex. #idname {rules} )
+
+16. What is the difference between a section and a div
+	The section tag is semantic and is used to group/nest data together, while the div tag is not semantic, and is usually used to stylistically format data.
+
+17. What is CSS used for? 
+	CSS is used to style, format, and control the presentation of everything on a webpage.
+
+18. How to we select an element? Example - every h2 on the page
+	To select an element in CSS, simply write out the tag name before your curly braces; all elements identified with that tag in your HTML will be selected. (ex. p {color:blue} will turn all paragraph text blue, unless specifically defined elsewhere).
+
+19. What is the difference between a class and an id? - Give me an example of when I might use each one
+	A class attribute is used to group elements together to assign style rules to many elements all at once (as with paragraphs across a webpage, that you want uniform formatting across). An id attribute is used to give a single element a unique identifier so that it may be formatted independently (as with a unique image or block of text on a page that should appear distinct from all other assets).
+
+20. How do we select classes in CSS?
+	You reference a class in CSS by using the "." character, followed by the class name, then the curly brackets that contain your CSS rules for that class. (ex. .className {rules} )
+
+21. How do we select a p element with a single class of “human””?
+	You use the p tag then the human class identifier together (.human), no spaces, before your curly braces. (ex. p.human {color: yellow;} )
+
+22. What is a parent child selector? When would this be useful? 
+	A parent child selector is when you are selecting element(s) nested under other tags/identifiers. This is useful functionality that you may use when you have elements grouped into different section or div tags. Using parent-child selectors, you can assign style rules to specific elements, found under the tags/identifiers that you define in your CSS. (ex. parent child {rules} )
+
+23. How do you select all links within a div with the class of sidebar?
+	.sidebar link {rules}   (or .sidebar a {rules} )
+
+24. What is a pseudo selector?
+	A pseudo selector defines style rules that only appear when the user fulfills a specified condition. (ex. hover, visited, active)
+
+25. What do we use the change the spacing between lines?
+	You can use the CSS property "line-height" to control spacing between lines.
+
+26. What do we use to change the spacing between letters?
+	You can use the CSS property "letter-spacing" to control spacing between letters.
+
+27. What do we use to to change everything to CAPITALS? lowercase? Capitalize?
+	all capitals >	text-transform: uppercase;
+	lowercase >	text-transform: lowercase;
+	capitalize >	text-transform: capitalize;
+
+28. How do I add a 1px border around my div that is dotted and black?
+	Use the following property:	border: 1px dotted black
+
+29. How do I select everything on the page? 
+	Use the wild card character "*"
+
+30. How do I write a comment in CSS?
+	// For single line comments
+	*/ For multi line comments */
+
+31. How do I find out what file I am in, when I am using the command line? 
+	Enter the following: pwd
+
+32. Using the command line - how do I see a list of files/folders in my current folder?
+	Enter the following: ls
+
+33. How do I remove a file via the command line? Why do I have to be careful with this? 
+	Enter the following: rm <filename>
+	There is no confirmation prompt or warning, and items are permanently deleted.
+
+34. Why should I use version control? 
+	It is the best way to collaborate	with other developers - you are able to maintain the original code, while branching off and simultaneously completing tasks that can later be pushed and merged back into a single working product. It helps to minimize bugs and keep track of when, who, and how fixes are made. Bugs are more easily addressed due to the tracking process, and the main, master code is always maintained in case of emergencies.
+
+35. How often should I commit to github?
+	As often as possible (within reasonable limits, of course)! Smaller, more frequent pushes minimize the risk of pushing bugs to the main repo, and they also make it easier to track down issues. Ideal frequency will depend on the number of collaborators, and the frequency of your actual changes, but ultimately you will want to push very frequently (so long as you check your work and make sure you aren't stepping on your colleagues' toes).
+
+36. What is the command we would use to push our repo up to github? 
+	git push -u origin branch-name
+
+37. Walk me through Lambda's git flow. 
+- Fork the repo on GitHub
+- Clone the forked repo to your device by entering the following command into your device terminal (you will need the SSH URL for the repo, available on GitHub): git clone <URL>
+- In your terminal, move into the cloned repo using the following command (it is a relative command, so you will need to move in file sequence - use "pwd" to help with this step): cd <filename you want to move into>
+- In your terminal, create a branch using the following command: git checkout -b <branch-name>
+- Open your project in VSCode using the following command in your terminal: code .  (If this does not work, you may need to open VSCode manually and navigate to your project files)
+- Make changes to the project!
+- Use the following command to check that your changes are coming through successfully: git status
+- Stage your changes using the following command: git add . (or to stage specific files individually, use git add <filename> )
+- Use the following command to check that your staged files are coming through successfully: git status
+- Commit your changes and add a commit message to let other devs know what your change was and how you you did it using the following command: git commit -m '<Your public commit message here>'
+- Push your change to the remote branch for your project using the following: git push -u origin <branch name>
+- Return to GitHub and make a pull request
+
+
+---------------------------------------------------------------------------
+Stretch Questions
+
+1. What is the difference between an inline element and a block element?
+	An inline element does not start a new line and only takes up as much space as it needs. A block element, however, does start a new line and always occupies the full width of the line.
+
+2. What happens when an element is positioned absolutely? 
+	Absolutely positioned elements disregard all other elements on the page and will always maintain their specified position - relatively positioned elements, by contrast, take into account the flow of the page and surrounding elements, and position themselves accordingly.
+
+3. How do I make an element take up only the amount of space it needs but also have the ability to give it a width? 
+	
+
+4. Name 3 elements that are diplay block by default, 2 elements that are display inline by default and 1 element that is display inline-block by default
+	
+
+5. In your own words, explain the box model. What is the "fix" for the box model, in other words, how do we make all elements respect the width we've given them? 
+	
