@@ -137,10 +137,13 @@ Stretch Questions
 	Absolutely positioned elements disregard all other elements on the page and will always maintain their specified position - relatively positioned elements, by contrast, take into account the flow of the page and surrounding elements, and position themselves accordingly.
 
 3. How do I make an element take up only the amount of space it needs but also have the ability to give it a width? 
-	
+	Use Flexbox! You can set limits for expansion that allow fluidity of the elements within your parameters.
 
-4. Name 3 elements that are diplay block by default, 2 elements that are display inline by default and 1 element that is display inline-block by default
-	
+4. Name 3 elements that are display block by default, 2 elements that are display inline by default and 1 element that is display inline-block by default
+	Display block by default: 1. div 2. paragraph 3. address 
+	Display inline by default: 1. anchor 2. span 
+	Display inline-block by default: button
 
 5. In your own words, explain the box model. What is the "fix" for the box model, in other words, how do we make all elements respect the width we've given them? 
-	
+	The box model refers to the space around your content; you have your actual content (like an image or block of text) visible on the screen, then you have padding around your content that gives it room to breath, then you may have a border around that padding, then a margin that clears space between other content and your border. This "box" defines the spacing around your content and between it and other elements on the page.
+	You are able to define these properties of the box model in CSS - every element in HTML can have these properties defined, and in that way you maintain complete control of your content and how it interacts with everything on your webpage.
